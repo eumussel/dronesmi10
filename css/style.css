@@ -1,0 +1,116 @@
+/* Estilos Gerais: */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  color: #fff;
+}
+
+body {
+  background-color: #000;
+  font-family: Roboto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Imagem: */
+
+.logo {
+  width: 100%;
+}
+
+/* Contêiner:  */
+
+.conteiner-principal {
+  width: 100%;
+  height: calc(100vh - 8px);
+  display: grid;
+  grid-template-areas:
+    "linha-1 linha-1"
+    "linha-2 linha-2"
+    "linha-3-1 linha-3-2"
+    "linha-4 linha-4";
+  gap: 15px 10px;
+
+  /* Alinhamento do Conteúdo. */
+  justify-content: center;
+  align-content: center;
+
+  /* Alinhamento dos Itens: */
+  justify-items: center;
+  align-items: center;
+}
+
+.conteiner-logo {
+  min-width: 50px;
+  max-width: 450px;
+  padding: 50px;
+}
+
+/* Linhas do Grid: */
+
+.linha-1 {
+  grid-area: linha-1;
+}
+
+.linha-2 {
+  grid-area: linha-2;
+}
+
+.linha-3-1 {
+  grid-area: linha-3-1;
+}
+
+.linha-3-2 {
+  grid-area: linha-3-2;
+}
+
+.linha-4 {
+  grid-area: linha-4;
+}
+
+/* Texto: */
+
+.espacamento-entre-linhas {
+  line-height: 150%;
+}
+
+.texto-centralizado {
+  text-align: center;
+}
+
+.texto-efeito:hover {
+  transition-duration: 500ms;
+  color: #ed3238;
+}
+
+.texto-negrito {
+  font-weight: bold;
+}
+
+.texto-vermelho {
+  color: #ed3238;
+}
+
+/* Media Query: */
+
+@media (max-width: 300px) {
+  body {
+    margin: 25px auto;
+  }
+
+  .conteiner-principal {
+    justify-content: center;
+    align-content: start;
+  }
+
+  .conteiner-logo {
+    padding: 15px;
+  }
+
+  .conteiner-texto {
+    font-size: 0.75rem;
+  }
+}
